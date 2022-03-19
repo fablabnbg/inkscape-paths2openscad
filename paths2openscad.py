@@ -1500,7 +1500,8 @@ module chamfer_sphere(rad=chamfer, res=chamfer_fn)
                 **{"SCAD": scad_fname, "NAME": self.basename}
             )
             try:
-                m = re.match(r"(\d+)\s+(.*)", open(pidfile).read())
+                with open(pidfile) as pidf:
+                    m = re.match(r"(\d+)\s+(.*)", pidf.read())
                 oldpid = int(m.group(1))
                 oldcmd = m.group(2)
                 # print >> sys.stderr, "pid {1} seen in {0}".format(pidfile, oldpid)
@@ -1532,7 +1533,8 @@ module chamfer_sphere(rad=chamfer, res=chamfer_fn)
                 except OSError as e:
                     raise OSError("%s failed: errno=%d %s" % (cmd, e.errno, e.strerror))
                 try:
-                    open(pidfile, "w").write(str(proc.pid) + "\n" + cmd + "\n")
+                    with open(pidfile, "w") as pidf:
+                        pidf.write(str(proc.pid) + "\n" + cmd + "\n")
                 except Exception:
                     pass
             else:
