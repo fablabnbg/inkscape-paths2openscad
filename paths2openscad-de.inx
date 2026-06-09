@@ -51,7 +51,7 @@
       <option value="16" xml:lang="de">16: Fein (langsamer)</option>
       <option value="32" xml:lang="de">32: Perfekt (sehr langsam)</option>
     </param>
-    <param type="boolean" name="force_line" gui-text="Umrisslinien-Modus immer verwenden; Füllungen werden ignoriert" xml:lang="de">False</param>
+    <param type="boolean" name="force_line" gui-text="Umrisslinien-Modus immer verwenden; Füllungen werden ignoriert" xml:lang="de">false</param>
     <param type="description" name="spacer"><!-- --></param>
   </page>
 

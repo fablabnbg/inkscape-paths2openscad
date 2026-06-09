@@ -56,7 +56,7 @@ Note: the 'Scale: XX %' instruction has no effect in outline mode.</_param>
       <option value="32">32: Perfect (slowest)</option>
     </param>
 
-    <param name="force_line" type="boolean" gui-text="Force outline mode, ignore fill">False</param>
+    <param name="force_line" type="boolean" gui-text="Force outline mode, ignore fill">false</param>
     <_param name="spacer" type="description"><!-- --></_param>
   </page>
 
